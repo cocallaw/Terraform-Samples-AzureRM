@@ -4,7 +4,7 @@ provider "azurerm" {
 
 data "azurerm_key_vault_secret" "mySecretSSHKey" {
   name      = "tfkvsvrSSHKey"
-  vault_uri = "https://yourKeyVault.vault.azure.net/"
+  key_vault_id = "/subscriptions/GUID/resourceGroups/RGNAME/providers/Microsoft.KeyVault/vaults/KVNAME"
 }
 
 # Create a resource group if it doesn’t exist
